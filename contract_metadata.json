@@ -1,0 +1,27 @@
+{
+    "contracts": [
+        {
+            "name": "BoomJ",
+            "address": "0x002748dB885D4CCfe3C7C92143f0805F4eBEEC01",
+            "txHash": "0x2692bae642716b3e18de3fcea779c882efd262066dc7cd2e9e01b1964bc186b2",
+            "deployer": "0x002748dB885D4CCfe3C7C92143f0805F4eBEEC01"
+        },
+        {     
+    ]
+}
+    npm i thirdweb
+
+import { createThirdwebClient, getContract } from "thirdweb";
+import { defineChain } from "thirdweb/chains";
+
+// create the client with your clientId, or secretKey if in a server environment
+const client = createThirdwebClient({ 
+  clientId: "YOUR_CLIENT_ID"
+ });
+
+// connect to your contract
+const contract = getContract({ 
+  client, 
+  chain: defineChain(8453), 
+  address: "0x2bdf3d91F907D504466272dEF6068d127374d45A"
+});
